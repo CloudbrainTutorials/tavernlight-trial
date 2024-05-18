@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spells>
 	<!-- Attack Spells -->
+	<instant group="attack" spellid="179" name="Great Northern Gale" words="ego inflantur venti" level="1" mana="30" premium="0" range="1" selftarget="1" cooldown="3" groupcooldown="4" needlearn="0" script="attack/great_northern_gale.lua">
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
+	</instant>
 	<instant group="attack" spellid="62" name="Annihilation" words="exori gran ico" level="110" mana="300" premium="1" range="1" needtarget="1" needweapon="1" cooldown="30000" groupcooldown="4000" needlearn="0" script="attack/annihilation.lua">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" />
