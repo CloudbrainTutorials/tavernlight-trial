@@ -36,7 +36,7 @@
 	$config['sqlPassword'] = 'root';
 
 	// The database name to connect to. (This is usually same as username).
-	$config['sqlDatabase'] = 'forgottenserver';
+	$config['sqlDatabase'] = 'forgottenserver_142';
 
 	// Hostname is usually localhost or 127.0.0.1.
 	$config['sqlHost'] = '127.0.0.1';
