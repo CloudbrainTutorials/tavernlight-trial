@@ -1,0 +1,8 @@
+Module
+  name: game_jump
+  description: Q7 Implementation where we have a jumping button
+  author: Noah
+  sandboxed: true
+  scripts: [ jump ]
+  @onLoad: init()
+  @onUnload: terminate()
