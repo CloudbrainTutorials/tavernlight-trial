@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spells>
+	<!-- Attack Spells -->
+	<instant group="attack" spellid="179" name="Great Northern Gale" words="ego inflantur venti" level="1" mana="30" premium="0" range="1" selftarget="1" cooldown="3" groupcooldown="4" needlearn="0" script="attack/great_northern_gale.lua">
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
+	</instant>
+</spells>
