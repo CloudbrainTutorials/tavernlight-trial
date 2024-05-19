@@ -1,12 +1,15 @@
+-- Window Variables
 jumpWindow = nil
 jumpMenuButton = nil
 jumpWindowButton = nil
 
+-- Jump button variables
 local moveDistance = 0
 local wrapDistance = 0
 local roofDistance = 0
 local loopEvent = nil
 
+-- Initiates the creation of the module
 function init()
     connect(g_game, {
         onGameStart = online,
@@ -24,6 +27,7 @@ function init()
     jumpWindowButton = jumpWindow:getChildById('buttonJump')
 end
 
+-- Terminates the module components on exit
 function terminate()
     disconnect(g_game, {
         onGameStart = online,
@@ -34,6 +38,7 @@ function terminate()
     jumpMenuButton:destroy()
 end
 
+-- Opens and closes the window and starts the astops the button movement
 function toggle()
     if jumpMenuButton:isOn() then
         jumpMenuButton:setOn(false)
@@ -49,12 +54,15 @@ function toggle()
     end
 end
 
+-- Moves the button from right to left and wraps back around
 function moveButton()
     if jumpWindow:isVisible() then
         moveDistance = jumpWindowButton:getMarginRight()
+        -- Wrap back to start
         if moveDistance >= wrapDistance then
             moveDistance = 0
             resetButton()
+        -- Move left
         else
             moveDistance = moveDistance + 10
             jumpWindowButton:setMarginRight(moveDistance)
@@ -62,6 +70,7 @@ function moveButton()
     end
 end
 
+-- Resets the button back to the right and to a random height 
 function resetButton()
     jumpWindowButton:setMarginBottom(math.random(0, roofDistance))
     jumpWindowButton:setMarginRight(0)
